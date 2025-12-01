@@ -1,0 +1,37 @@
+{
+    "name": "RTU Go Programming",
+    "image": "mcr.microsoft.com/devcontainers/go:1.22",
+
+    // Features – optional but useful
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "go.toolsManagement.autoUpdate": true,
+                "go.useLanguageServer": true,
+                "go.lintTool": "staticcheck",
+                "go.lintOnSave": "package",
+                "editor.formatOnSave": true
+            }
+        }
+    },
+
+    // Forward port for webserver (Topic 5)
+    "forwardPorts": [8080],
+
+    // Auto-run after container is created
+    "postCreateCommand": "go version",
+
+    // Recommend Codespaces 4-core machine
+    "hostRequirements": {
+        "cpus": 4
+    }
+}

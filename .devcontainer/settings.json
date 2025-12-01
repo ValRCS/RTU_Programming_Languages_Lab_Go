@@ -1,0 +1,7 @@
+{
+    "go.formatTool": "gofmt",
+    "go.lintOnSave": "workspace",
+    "go.lintTool": "staticcheck",
+    "editor.formatOnSave": true,
+    "go.testFlags": ["-v"]
+}
